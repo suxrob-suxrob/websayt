@@ -19,18 +19,50 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
-  transition: 0.5 ease;
+  transition: all 0.3s ease;
 }
-header .sticky {
-  background: crimson;
-  padding: 10px 100px;
+header.sticky {
+  background: lightslategray;
 }
 header .brand {
   color: #fff;
-  font-size: 32px;
+  font-size: 27px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
+  animation: sass 15s infinite;
+}
+@keyframes sass {
+  0% {
+    color: #836464;
+  }
+  15% {
+    color: #486491;
+  }
+  25% {
+    color: #8d7a30;
+  }
+  35% {
+    color: #a03ab7;
+  }
+  40% {
+    color: #3a70b7;
+  }
+  45% {
+    color: #8b6b60;
+  }
+  55% {
+    color: #ffeb3bc4;
+  }
+  65% {
+    color: #9ef403;
+  }
+  75% {
+    color: lightseagreen;
+  }
+  85% {
+    color: lime;
+  }
 }
 header .navigation {
   position: relative;
@@ -41,13 +73,41 @@ header .navigation a {
   font-weight: 500;
   text-decoration: none;
   margin-left: 30px;
-  transition: 0.5s ease;
+  /* transition: 0.5s ease; */
+  animation: semd 15s infinite;
 }
-header .navigation a:hover {
-  color: crimson;
+@keyframes semd {
+  0% {
+    color: #836464;
+  }
+  15% {
+    color: #486491;
+  }
+  25% {
+    color: #8d7a30;
+  }
+  35% {
+    color: #a03ab7;
+  }
+  40% {
+    color: #3a70b7;
+  }
+  45% {
+    color: #8b6b60;
+  }
+  55% {
+    color: #ffeb3bc4;
+  }
+  65% {
+    color: #9ef403;
+  }
+  75% {
+    color: lightseagreen;
+  }
+  85% {
+    color: lime;
+  }
 }
-
-
 section {
   padding: 100px;
 }
@@ -68,7 +128,7 @@ section {
 .main .content h2 {
   color: green;
   text-shadow: 0 0 10px gold;
-  font-size: 36px;
+  font-size: 64px;
   font-weight: 500;
   transition: 0.5s ease;
 }
@@ -86,7 +146,7 @@ section {
 }
 .animated-text h3 {
   color: crimson;
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 700;
   line-height: 70px;
   letter-spacing: 1px;
@@ -114,6 +174,34 @@ section {
 .btn {
   color: #fff;
   background-color: rgba(76, 0, 130, 0.795);
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin: 30px 0;
+  transition: 0.5s ease;
+}
+.btn_sm {
+  color: #fff;
+  background-color: rgba(76, 0, 130, 0.795);
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  margin: 30px 0;
+  transition: 0.5s ease;
+}
+.btn_sux {
+  color: #fff;
+  background-color: rgba(76, 0, 130, 0.795);
   font-size: 17px;
   font-weight: 600;
   display: inline-block;
@@ -126,6 +214,18 @@ section {
   transition: 0.5s ease;
 }
 .btn:hover {
+  background: rgba(255, 255, 255, 0.788);
+  color: chocolate;
+  text-shadow: cornflowerblue;
+  box-shadow: 0 0 60px darkslateblue;
+}
+.btn_sm:hover {
+  background: rgba(255, 255, 255, 0.788);
+  color: chocolate;
+  text-shadow: cornflowerblue;
+  box-shadow: 0 0 60px darkslateblue;
+}
+.btn_sux:hover {
   background: rgba(255, 255, 255, 0.788);
   color: chocolate;
   text-shadow: cornflowerblue;
@@ -215,6 +315,42 @@ section {
 }
 .skills {
   background: #000016;
+  animation: skillesm 15s infinite;
+}
+@keyframes skillesm {
+  0% {
+    background-color: black;
+  }
+  10% {
+    background-color: #45344e;
+  }
+  25% {
+    background-color: #34464e;
+  }
+  35% {
+    background-color: #344e43;
+  }
+  45% {
+    background-color: #3e4e34;
+  }
+  55% {
+    background-color: #4e4534;
+  }
+  64% {
+    background-color: #4e3434ed;
+  }
+  75% {
+    background-color: #3a6048;
+  }
+  85% {
+    background-color: rgba(76, 0, 130, 0.603);
+  }
+  95% {
+    background-color: #374e34;
+  }
+  100% {
+    background-color: black;
+  }
 }
 .skills .content {
   position: relative;
@@ -272,24 +408,24 @@ section {
   border-radius: 2px;
 }
 .skills .html::before {
-  width: 95%;
+  width: 54%;
   background: #e45126;
 }
 
 .skills .css::before {
-  width: 85%;
+  width: 50%;
   background: cornflowerblue;
 }
 .skills .JavaScript::before {
-  width: 80%;
+  width: 32%;
   background: darkgoldenrod;
 }
 .skills .jquery::before {
-  width: 75%;
+  width: 25%;
   background: lime;
 }
 .skills .php::before {
-  width: 65%;
+  width: 35%;
   background: mediumslateblue;
 }
 
@@ -299,7 +435,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 45px;
 }
 .title p {
   width: 80%;
@@ -342,6 +478,7 @@ section {
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 50px;
+  width: 106%;
 }
 
 .work .content .card {
@@ -379,8 +516,7 @@ section {
 .contact .content .row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  align-items: center;
 }
 .contact .row .card {
   background: #fff;
@@ -411,7 +547,14 @@ section {
   font-weight: 700;
   margin: 10px;
 }
-.contact .card .info .span {
+.contact .card .info a {
+  color: #666;
+  font-weight: 500;
+  width: 25px;
+  height: 10px;
+  text-decoration: none;
+}
+.contact .card .info span {
   color: #666;
   font-weight: 500;
 }
@@ -474,87 +617,113 @@ section {
 .footer .footer-title {
   font-size: 20px;
   font-weight: 600;
+  letter-spacing: 10px;
 }
 .footer p {
   margin-top: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
 }
 @media (max-width: 1049px) {
   header {
     padding: 12px 20px;
   }
-  header .sticky {
+  header.sticky {
     padding: 10px 20px;
   }
   header .navigation {
     display: none;
   }
-
   header .navigation.active {
     z-index: 888;
     position: fixed;
-    background: #fff;
+    background: url(./img/manzaralirasm.jpg) no-repeat;
     top: 0;
     right: 0;
     width: 380px;
     height: 100%;
-    background-image: url("./img/manzaralirasm.jpg");
-    background-image: rgba(102, 102, 102, 0);
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     box-shadow: 0 5px 25px rgba(1 1 1 /15%);
-    transition: 0.3s ease;
+    transition: 03s ease;
   }
   header .navigation a {
-    color: gold;
-    font-size: 30px;
-    margin-right: 10px;
+    font-size: 22px;
+    margin: 10px;
     padding: 0 20px;
     border-radius: 20px;
   }
   header .navigation a:hover {
     background: crimson;
-    color: seagreen;
   }
   .menu-btn {
     position: absolute;
-    background: url("./img/menu.png") no-repeat;
+    background: url(./img/menu.png) no-repeat;
     background-size: 30px;
-    background-position: 30px;
-    width: 80px;
+    background-position: center;
+    width: 40px;
     height: 40px;
     right: 0;
     margin: 0 20px;
     cursor: pointer;
     transition: 0.4s ease;
-    font: inherit(1);
+    /* filter: invert(1); */
   }
   .menu-btn.active {
     z-index: 999;
-    background: url("./img/ikonkax.png") no-repeat;
+    background: url(./img/ikonkax.png) no-repeat;
     background-size: 25px;
     background-position: center;
     transition: 0.3s ease;
   }
   section {
-    padding: 80px 20px;
+    padding: 80px 41px;
+  }
+  .main .content h2 {
+    font-size: 25px;
+  }
+  .main .content h3 {
+    font-size: 35px;
+  }
+
+  .section-title {
+    font-size: 36px;
   }
   .about .content {
     flex-direction: column;
   }
-}
-.main .content h2 {
-  font-size: 25px;
-}
-.main .content h3 {
-  font-size: 35px;
-}
-.section-title {
-  font-size: 36px;
+  .about .content .column {
+    position: relative;
+    width: 100%;
+  }
+  .about .content .col-right {
+    margin-top: 40px;
+  }
+
+  .skills .content {
+    flex-direction: column;
+  }
+
+  .skills .content .column {
+    position: relative;
+    width: 100%;
+  }
+  .skills .content .col-right {
+    margin-top: 40px;
+  }
+  .contact-form {
+    padding: 35px 40px;
+  }
+  .contact .content .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 111%;
+    flex-wrap: wrap;
+    margin-left: -18px;
+  }
 }
 
 .about .content .column {
@@ -562,32 +731,9 @@ section {
   width: 100%;
 }
 .about .content .col-right {
-  margin-top: 40px;
-}
-
-.about .content .col-right {
   margin-left: 40px;
 }
 
-.skills .content {
-  flex-direction: column;
-}
-.skills .content .column {
-  position: relative;
-  width: 100%;
-}
-.skills .content .col-right {
-  margin-top: 40px;
-}
-.services .content .card {
-  flex-wrap: wrap;
-}
-.work .content .card {
-  position: relative;
-}
-.contact-form {
-  padding: 35px 40px;
-}
 .scrollTop-btn {
   z-index: 999;
   position: fixed;
@@ -617,5 +763,5 @@ section {
 }
 .reveal.active {
   transform: translateY(0);
-  opacity: 2;
+  opacity: 1;
 }
